@@ -1,0 +1,33 @@
+
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "learning react framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulastrorock/Learn-React.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "js"
+  ],
+  "author": "astrorock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulastrorock/Learn-React/issues"
+  },
+  "homepage": "https://github.com/rahulastrorock/Learn-React#readme",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  }
+}

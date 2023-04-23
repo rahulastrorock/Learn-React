@@ -1,0 +1,53 @@
+1. package.json is configuration file for NPM 
+2. NPM is not node package manager. It is a repository which contains all the packages.
+3. these packages which is managed by NPM is also called dependencies.
+4. Most imp package is bundler.
+5. Bundler basically bundles the app , it is basically build the app for productions.
+    eg: create react app uses web-pack bundler behind the scenes.
+6. We will be using parcel bundler for our project.
+
+7. There are two type of dependencies we can install.
+    1- dev dependencies- it is generally required in development phase.
+    2- Normal dependencies- used in productions also.
+  thats why we are installing parcel as dev dependencies with flag -D.
+
+8. difference between ^  and ~  .
+
+9. package-lock.json keeps the record of every version that is upgraded to and locks it.
+   while package.json only have the approx version.
+
+10. node modules is like a database, it contains the actual data of the dependencies like for 
+    example it contains the whole code for parcel bundler.
+
+11. while seeing node modules it contains other code except for parcel which we installed.
+    those other codes are dependencies on which parcel is dependent. thus each dependencies can have 
+    its own other dependencies that is called transitive dependencies.
+
+    thats why every dependencies has its own package.json
+    and this all dev dependencies makes up dependencies tree.
+
+12. If i have package.json and package-lock.json , we can recreate the node_modules.
+
+13. npx - executing the package.
+    while npm - installing the package.
+
+14. Fetching react using CDN is not a good idea because it is not cached and it is not 
+    optimized for production.
+    
+    Also it is costly to fetch react from CDN everytime using network call.
+
+15. Parcel functions-
+    a. Dev build
+    b. building local server
+    c. HMR (Hot Module Replacement) using file watching algorithm which is written in C++.
+    d. faster build time using caching in parcel cache.
+    e. Bundling the app for production (minification and optimization)
+    f. compressing the app for production.
+    g. tree shaking (removing unused code from the app)
+    h. Image optimization (compressing the images)
+    i. Consistent Hashing- (hashing the file name so that the browser can cache the file)
+    j. Code splitting (splitting the code into chunks)
+    k. Lazy loading (loading the chunks only when required)
+    l. Scope hoisting (removing the wrapper function)
+    m. Differential serving (serving different code to different browsers) - support older browsers.
+    n. Diagnostic tools (gives the information about the app)
