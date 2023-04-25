@@ -5,6 +5,8 @@
   "description": "learning react framework",
   "main": "app.js",
   "scripts": {
+    "start": "parcel chapter2/index.html",
+    "build": "parcel build chapter2/index.html",
     "test": "jest"
   },
   "repository": {

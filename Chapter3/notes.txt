@@ -1,0 +1,57 @@
+1. please remove "main": "App.js", from package.json while building the app for production.
+    because it will conflict with the entry point of the app.
+2. npm start = npm run start = npx parcel index.html because we have defined start script in package.json
+
+3. JSX is not HTML in javascript. it is a syntax extension to javascript. it is a javascript XML.
+    It has HTML like syntax.
+
+4. this JSX code is transpiled before it is executed by the browser.
+    it is transpiled to javascript code by babel (parcel) and then executed by the browser.
+
+5. Babel is a javascript compiler. it is used to transpile javascript code to older version of javascript.
+    it is used to convert JSX to javascript.
+
+6. attributes in JSX are camelCase. not kebab-case.
+
+7. there are two types of react components.
+    1. functional components- new way of creating react components. it uses javascripts arrow functions.
+    2. class components- old way of creating react components. it uses javascript classes.
+
+    fucntional components returns JSX code.
+
+8. rendering component inside another component is called component composition.
+
+9. JSX sanitization- it is a process of removing malicious code from JSX code. 
+    It prevents cross site scripting attacks.
+
+10. JSX can have only one root element. it cannot have multiple root elements.
+    eg:- (
+        <div>
+            <h1>hello</h1>
+            <h2>world</h2>
+        </div>
+    )
+    
+    not 
+    (
+        <h1>hello</h1>
+        <h2>world</h2>
+    )
+
+    but if we want to have multiple root elements then we can use react fragments.
+    eg:- (
+        <React.Fragments>
+            <h1>hello</h1>
+            <h2>world</h2>
+        </React.Fragments>
+    )
+
+    React fragments behaves like a wrapper. it does not render anything in the DOM.
+    It is actually an empty tag.
+    eg:-
+    (
+        <>
+            <h1>hello</h1>
+            <h2>world</h2>
+        < />
+    )
