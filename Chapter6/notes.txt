@@ -1,0 +1,28 @@
+1. Monolith Architecture - all the code is in one place, which makes it difficult to maintain and scale. It is also difficult to add new features and fix bugs.
+2. Microservices Architecture - the code is divided into small services, which makes it easier to maintain and scale. It is also easier to add new features and fix bugs.
+3. separation of concerns - it is where the code is divided into different layers, which makes it easier to maintain and scale. It is also easier to add new features and fix bugs.
+        it follows a single responsibility principle, which means that each class should have only one responsibility.
+4. Each services run on different ports and connect to each other using REST API.
+5. The services are deployed on AWS EC2 instances.
+
+6. two ways to fetch data from API
+    1. page load -> wait for data -> display  => poor user experience
+    2. page load -> render quickly -> wait for data -> re render => better user experience
+
+7. React Hooks are just normal JS functions given by React that allow us to use state and lifecycle methods inside functional components.
+
+8. UseEffect , we need to pass two argument , first is arrow callback function and second is dependency array.
+    1. if dependency array is empty , then useEffect will run only once after initial render.
+    2. if dependency array is not empty , then useEffect will run after initial render and after every re-render if any of the value in dependency array changes.
+
+9. Optional chaining - ?. , it is used to access nested object properties without the need to validate if each property exists.
+    1. if the property exists, then the value will be returned.
+    2. if the property does not exist, then undefined will be returned.
+
+10. shimmer UI - it is used to show loading effect while fetching data from API.
+
+11. How a usestate modifies a constant variable like it is declared like 
+    ->const[posts,setPosts] = useState([]) , here posts is a constant variable and we are modifying it using setPosts.
+    ->this use effect is possible because of the concept of closure in javascript.
+    ->which is use effect calls the function and it creates a closure and in that closure it stores the value of posts and setPosts.
+    ->it re renders the components and this time posts is a new variable with new value.
