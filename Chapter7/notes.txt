@@ -1,0 +1,30 @@
+1. Use effect is called everytime the component is rendered if it has no dependency array.
+2. Use effect is called only when the component is mounted if it has an empty dependency array.
+3. use effect is called everytime the dependency array changes.
+4. Never make usestate hook outside of the function component.
+5. declare it always at the top of the function component.
+
+6. react router dom - it is a library that helps us to navigate between pages in react.
+
+7. Creating children routes and calling it using outlet.
+    outlet is a component that is used to render the children routes.
+    when applayout is rendered, it will render the outlet component and the outlet component will render the children routes.
+
+8.dont use the anchor tag to navigate between pages in react. use the link component from react router dom.
+    because anchor tag will refresh the page and react will lose its state.
+
+9. using link to doesnot refreshes the whole page. it just renders the component that is to be rendered.
+    that is why react is called a single page application.
+
+10. server side routing - when we navigate between pages, the whole page is refreshed.
+    *imp- when we navigate between pages, the whole page is not refreshed. only the component that is to be rendered is rendered.
+
+    thus we are implementing client side routing using react router dom.
+
+11. dynamic route- when we want to pass some data to the route, we use dynamic route.
+    we can pass data to the route using the link component.
+
+12. Link is a wrapper around the anchor tag. it is used to navigate between pages in react. 
+    it is used to navigate between pages in react without refreshing the page.
+
+13, useParams hook - it is used to get the parameters from the url.
