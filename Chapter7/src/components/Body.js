@@ -80,6 +80,8 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
+        {/* link tag is used here to link the restaurant card to the individudal restaurant page 
+          and make it clickable */}
         {filteredList.map((res) => (
           <Link key={res.data.id} to={"/restaurants/" + res.data.id}>
             <RestaurantCard resData={res} />
