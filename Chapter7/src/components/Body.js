@@ -81,7 +81,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {/* link tag is used here to link the restaurant card to the individudal restaurant page 
-          and make it clickable */}
+          and make it clickable ,it send us to the specified url in to tag where already the restaurant page is builted*/}
         {filteredList.map((res) => (
           <Link key={res.data.id} to={"/restaurants/" + res.data.id}>
             <RestaurantCard resData={res} />
