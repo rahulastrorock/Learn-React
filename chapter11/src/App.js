@@ -15,17 +15,32 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/shimmer";
+import UserContext from "./utils/UserContext";
 
 //lazy loading the instamart component
 const Instamart = lazy(() => import("./components/Instamart")); // here import is promise based so we can use lazy loading
 
 // AppLayout component to show: Header, Body, Footer
 const AppLayout = () => {
+  const [user, setUser] = React.useState({
+    name: "Rahul Singh",
+    email: "rahul@gmail.com",
+  });
+
   return (
     <React.Fragment>
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider
+        value={{
+          user: user,
+          setUser: setUser,
+        }} //this value is overriding the value of userContext.Provider in Body.js
+        // this will print Rahul Singh in all the header outlet and Footer component instead of
+        // astrorock
+      >
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </React.Fragment>
   );
 };
@@ -37,7 +52,14 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: (
+          <Body
+          // user={{
+          //   name: "astrorock",
+          //   age: 25,
+          // }}
+          />
+        ),
       },
       {
         path: "/about",

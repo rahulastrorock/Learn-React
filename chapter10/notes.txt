@@ -1,5 +1,0 @@
-Tailwind CSS
-    1. CSS on the go (in same file)
-    2. reusability
-    3. less bundle size
-    4. Flexible UI (Customization).

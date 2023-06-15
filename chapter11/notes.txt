@@ -1,0 +1,39 @@
+1.Tailwind CSS
+    1. CSS on the go (in same file)
+    2. reusability
+    3. less bundle size
+    4. Flexible UI (Customization).
+
+2.Props Drilling: Passing props from parent to child to child to child and so on.
+    disadvantages:
+    1. code becomes messy
+    2. difficult to maintain
+    3. difficult to debug
+    4. rendering lots of components as changes in parent component will re-render all the child components.
+
+3. We can pass props from parent to child but passing data from child to parent is possible by-
+    1. local storage (not recommended)
+    2. custom hooks (not recommended)
+    2. redux
+    3. context API
+
+4. we have made accordion of show and hide button to display and undisplay a description in instamart.js
+
+5. We cannot directly modify the state of other sibling components. 
+   Inorder to do that we have to lift the state up to the parent component and 
+   then pass it down to the child components as props. 
+This is called LIFTING THE STATE UP.
+
+6. usecontext hook is used to pass data from parent to child and child to child and so on.
+  It is used to avoid props drilling.
+
+  we can have multiple context in my app.
+
+7. state and props are tied to a component. 
+   If a component is unmounted then the state and props of that component will be destroyed.
+   but context is not tied to a component.
+
+8. context is like useState for whole app.
+
+9. we can override the defaul value of context by passing value in provider.
+    we have done this in app.js file. using userContext.provider

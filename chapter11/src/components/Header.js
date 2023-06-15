@@ -1,11 +1,15 @@
 import FoodFireLogo from "../../Images/Food Fire Logo.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext";
+
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   const isOnline = useOnline();
+
+  const { user } = useContext(UserContext); // here we are using the context to get the user data
 
   return (
     <div className="flex justify-between bg-slate-300  shadow-lg sm:bg-violet-50 md:bg-yellow-50">
@@ -39,6 +43,7 @@ const Header = () => {
           >
             {btnName}
           </button>
+          <li className="px-2 outline m-1">{user.name}</li>
         </ul>
       </div>
     </div>

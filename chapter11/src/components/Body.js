@@ -1,16 +1,18 @@
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import fetchData from "../utils/useFetchData"; //custom hook
 import useOnline from "../utils/useOnline"; //custom hook
+import UserContext from "../utils/UserContext"; //custom hook
 
 const Body = () => {
   // Local State Variable - Super powerful variable
   const [listOfRestaurants, setListOfRestraunt] = fetchData([]); //custom hook
   const [searchText, setSearchText] = useState("");
   const [filteredList, setfilteredList] = fetchData(""); //custom hook
+  const { user, setUser } = useContext(UserContext); // here we are using the context to get the user data
 
   // // useEffect hook
   // useEffect(() => {
@@ -54,6 +56,7 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
+
           <button
             className="search-btn outline-0 hover:bg-pink-700 text-black font-bold py-2 px-4 rounded "
             onClick={() => {
@@ -75,6 +78,17 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>
+        <input // here we are using the context to set the user data on the input field
+          className="search bg-red-50 outline pl-2"
+          placeholder="Enter new name"
+          value={user.name}
+          onChange={(e) => {
+            setUser({
+              name: e.target.value,
+              email: "bodyrahul@gmail.com",
+            });
+          }}
+        />
       </div>
       <div className="res-container flex flex-wrap">
         {/* link tag is used here to link the restaurant card to the individudal restaurant page 
