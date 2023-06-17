@@ -1,0 +1,52 @@
+1. we use only single redux to store all the data
+    each store inside redux has different slices of data. like, cart slice, user slice, theme slice etc.
+
+2. our components cannot directly modify the store.
+    we need to dispatch an action to modify the store.
+    This action will call a reducer function which will modify the slice of the store.
+
+3. We can use selector to read the data from the redux store and use it in our components.
+
+4. using selector means subscribing to the store. 
+    so whenever the store changes, the selector will be called again.
+
+5.npm i @reduxjs/toolkit
+    this is a package which will help us to write redux code in a simpler way.
+    this is core of redux. its job is to maintain the store.
+
+6.npm i react-redux
+    this package will help us to connect our react app with redux store.
+    it is a kind of bridge between react and redux.
+
+7. We use Provider component from react-redux package to connect our react app with redux store.
+    we wrap our entire app inside Provider component and pass the store as a prop to Provider component.
+
+8. RTK is called redux toolkit.
+
+9. Reducers function takes two arguments.
+    1. state - this is the current state of the store. in case of first time, it will be the initial state.
+    2. action - this is the data which is coming in.
+
+10. We use configureStore function from RTK to create a store.
+    we pass an object to configureStore function.
+    this object has a property called reducer.
+    we pass all the reducers to this property.
+
+11. We use createSlice function from RTK to create a slice of the store.
+    we pass an object to createSlice function.
+    this object has three properties.
+    1. name - name of the slice.
+    2. initialState - initial state of the slice.
+    3. reducers - this is an object which has all the reducer functions for this slice.
+
+12. We use useDispatch hook from react-redux package to dispatch an action.
+    we call this hook inside our component and store it in a variable.
+    we call this variable as dispatch.
+    we call dispatch function and pass an action to it.
+
+13. We use useSelector hook from react-redux package to read data from the store.
+    we call this hook inside our component and store it in a variable.
+    we call this variable as selector.
+    we call selector function and pass a function to it.
+    this function will receive the current state of the store as an argument.
+    this function will return the data which we want to read from the store.
