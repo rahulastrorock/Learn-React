@@ -1,0 +1,70 @@
+1. Nowadays react testing library is used for writing unit testcases.
+previous versions of react used enzyme for writing unit testcases.
+
+2. Jest is used for running testcases.
+
+3. we need to write testcases to check if i am as a developer building a
+    new component so check if it breaks any existing functionality of old components.
+
+4. Test driven development is a process of writing testcases before writing the actual code.
+
+5. types of testing
+    1. manual testing
+    2. automated testing -seleneium testing
+    3. end to end testing - cypress testing - testing the entire application from start to end
+    4. unit testing - jest, enzyme, react testing library- testing individual components
+    5. integration testing - testing the integration between two components
+
+    there are other types of testing like smoke testing, regression testing, sanity testing, etc.
+
+    headless browser - browser without UI
+
+Jest is the javascript testing framework used for running testcases.
+
+6. Instaling react testing library
+    npm install --save-dev @testing-library/react
+
+7. installing jest
+    npm install -D jest
+
+8. configuring jest
+    npx jest --init
+    -> it is using npx instead of npm because we need it just once to configure jest
+    -> it will ask for some questions 
+    for typescript project select yes otherwise no
+    choose jsdom as environment
+    choose yer for coverage report
+    choose yes for babel
+    choose yer for automatcally clear mock calls and instances
+
+9. install jsdom
+    npm i -D jest-environment-jsdom
+
+9. running testcases
+    npm run test
+
+10. create first testfile
+    create a folder __tests__
+    __  is called dunder
+
+11. configure babel 
+    npm install --save-dev babel-jest @babel/core @babel/preset-env
+    create a file .babelrc or babel.config.js
+    {
+        "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
+    }
+
+12. json is different from javascript obejct
+    json is a string
+    javascript object is a key value pair
+
+13. Add coverage report to .gitignore file
+    /coverage
+
+14. react testing library provide us with render method which is like a small 
+container in which we can render our component and then we can write testcases
+
+15. We use moduleNameMapper inside jest.config.js to tell jest how to handle css files
+    moduleNameMapper: {
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }

@@ -1,0 +1,28 @@
+1. outlets should always be created in the parent section.
+ like if parent of aboutus is home then outlet should be created in home
+ like if parent of profile is aboutus then outlet should be created in aboutus
+ see code that profile.js is injected in aboutus.js
+
+2. creating our own hooks
+    we should create our own hooks because
+    1. reusability
+    2. readability
+    3. maintainability
+    4. testability
+    5. modularity
+
+3. Transferred filterdata function to helper.js and imported it in body.js
+
+4. always named the hook with use keyword like useFilterData.
+
+5. export helper methods as named export and hooks as default export.
+
+6. to check whether the user is online or offline we use
+    javascript event listener i.e onlineevent and offlineevent
+
+7. whenever we add a eventlistener , we need to clean it up
+    so we use useEffect hook to clean up the eventlistener
+
+8. parcel bundles all the js files into one js file but for large production apps
+    where there are 100's of components and bundling all of them in one file is not
+    a good idea. so we use code splitting=chunking=dynamic bundling=lazy loading.
